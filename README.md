@@ -1,21 +1,6 @@
-# porous.dev
+# Website for the Porous project
 
-## Development
+This repository serves as both a testbed for using the Porous web engine, an example for users to learn from and a source of information about the project as well as its documentation.
 
-```sh
-$ porous dev
-```
+## Attributions
 
-Go to [http://localhost:9292/](http://localhost:9292/)
-
-## Production
-
-Place your SSL certificate in `ssl`:
-
-- `ssl/cert.pem`
-- `ssl/key.pem`
-
-```sh
-$ porous build production
-$ porous server
-```
