@@ -14,20 +14,22 @@ class Home
       component Header
 
       # Hero
-      div.container.mx_auto.p_6.text_center.text_lg.my_20.hero! do
-        h2.text_5xl.leading_tight.font_medium.text_center do
+      div.hero! class: 'container mx-auto p-6 text-center text-lg my-20' do
+        h2 class: 'text-5xl leading-tight font-medium text-center' do
           div class: 'font-bold bg-gradient-to-br from-cyan-400 to-yellow-600 bg-clip-text text-transparent box-decoration-clone' do
             text 'Isomorphic Engine'
           end
           text 'for web applications'
         end
-        p.mt_8 'A library to write pure Ruby components that are rendered on the server and hydrated in the browser.'
-        p.mt_8 do
+        p(class: 'mt-8') {
+          'A library to write pure Ruby components that are rendered on the server and hydrated in the browser.'
+        }
+        p class: 'mt-8' do
           text 'Only write the '
-          strong.drop_shadow_md.text_cyan_400 'content or logic needed for your app'
+          strong(class: 'drop-shadow-md text-cyan-400') { 'content or logic needed for your app' }
           text '. No need to maintain the external interface of the framework to keep your application running.'
         end
-        p.mt_8 do
+        p class: 'mt-8' do
           text 'And when you want it – all the '
           em 'bells and whistles'
           text ' too!'
@@ -35,19 +37,19 @@ class Home
       end
 
       # Features
-      div.container.mx_auto.p_6.my_20.features! do
-        div.text_center do
-          h2.text_3xl.leading_tight.font_medium do
+      div.features! class: 'container mx-auto p-6 my-20' do
+        div class: 'text-center' do
+          h2 class: 'text-3xl leading-tight font-medium' do
             text 'More features, '
-            span.font_bold.bg_gradient_to_br.from_cyan_400.to_yellow_600.bg_clip_text.text_transparent.box_decoration_clone do
+            span class: 'font-bold bg-gradient-to-br from-cyan-400 to-yellow-600 bg-clip-text text-transparent box-decoration-clone' do
               text 'less code'
             end
           end
-          p.my_8 do
+          p class: 'my-8' do
             text 'The core principle of Porous is to get functional applications written quickly by only having the developer write the parts of the application that is unique to their application.'
           end
         end
-        div.text_md.grid.gap_12 class: 'lg:grid-cols-2' do
+        div class: 'text-md grid gap-12 lg:grid-cols-2' do
           {
             ['🙅',
              'No Bundled Runtime'] => 'The plumbing of the application happens in the library so updating becomes straightforward unless breaking changes affect the code you wrote. Your application consists of Plain Old Ruby Objects.',
@@ -62,11 +64,11 @@ class Home
             ['📡',
              'Real-time Communication'] => 'Pages communicate with the server over a secure WebSocket connection making data streaming and real-time features easier to implement.',
           }.each do |heading, description|
-            div.rounded.flex.flex_col.gap_6.p_6.shadow_lg.divide_y class: 'divide-gray-100 dark:divide-gray-700 bg-white dark:bg-slate-800' do
-              h3.flex.gap_6.justify_start.text_xl do
+            div class: 'rounded flex flex-col gap-6 p-6 shadow-lg divide-y divide-gray-100 dark:divide-gray-700 bg-white dark:bg-slate-800' do
+              h3 class: 'flex gap-6 justify-start text-xl' do
                 heading.each { |item| span item }
               end
-              p.pt_6 description
+              p(class: 'pt-6') { description }
             end
           end
         end

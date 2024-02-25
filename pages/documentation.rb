@@ -10,16 +10,16 @@ class Documentation
     div class: 'text-slate-700 dark:text-slate-200' do
       component Header
 
-      h2.text_3xl.leading_tight.font_medium.text_center.my_12 do
+      h2 class: 'text-3xl leading-tight font-medium text-center my-12' do
         text 'Porous is still a '
-        span.font_bold.bg_gradient_to_br.from_cyan_400.to_yellow_600.bg_clip_text.text_transparent.box_decoration_clone do
+        span class: 'font-bold bg-gradient-to-br from-cyan-400 to-yellow-600 bg-clip-text text-transparent box-decoration-clone' do
           text 'work in progress'
         end
         text '.'
       end
 
-      div.container.mx_auto.p_6 do
-        h3.text_xl.underline.mb_3.mt_6 do
+      div class: 'container mx-auto p-6' do
+        h3 class: 'text-xl underline mb-3 mt-6' do
           text 'If you want to get an idea of the progress:'
         end
         p do
@@ -33,7 +33,7 @@ class Documentation
           text '. They will be updated as I progress.'
         end
 
-        h3.text_xl.underline.mb_3.mt_6 do
+        h3 class: 'text-xl underline mb-3 mt-6' do
           text 'If you understand the risks and want to try it out:'
         end
         p do
@@ -42,7 +42,7 @@ class Documentation
           text ' and then follow these steps to get started.'
         end
 
-        ul.mt_6.list_disc do
+        ul class: 'mt-6 list-disc' do
           li do
             text 'Install the latest gem with '
             code 'gem install porous'
