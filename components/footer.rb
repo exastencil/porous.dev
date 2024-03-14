@@ -1,15 +1,14 @@
-class Footer
-  include Porous::Component
+# frozen_string_literal: true
 
-  def render
+# The navigation footer at the bottom of every page
+class Footer < Porous::Component
+  def content
     footer class: 'container mx-auto p-6 flex flex-col-reverse gap-8 justify-between text-slate-500 border-t border-slate-500 sm:flex-row' do
       section class: 'flex flex-col gap-6' do
-        span(class: 'text-2xl') { '🧽 porous.dev' }
+        span '🧽 porous.dev', class: 'text-2xl'
         p do
           text 'Designed and developed by '
-          a href: 'https://github.com/exastencil', class: 'transition-colors text-gray-700 hover:text-cyan-600' do
-            text 'Michael Prins'
-          end
+          a 'Michael Prins', href: 'https://github.com/exastencil', class: 'transition-colors text-gray-700 hover:text-cyan-600'
           text '.'
         end
         ul class: 'inline-flex gap-4' do
@@ -26,13 +25,13 @@ class Footer
         end
       end
       nav class: 'text-slate-700 dark:text-slate-200 sm:text-right' do
-        div(class: 'text-gray-500 mb-1') { 'Navigation' }
+        div 'Navigation', class: 'text-gray-500 mb-1'
         ul class: 'flex flex-col gap-2' do
           {
-            'https://github.com/exastencil/porous.dev' => 'View the source',
-          }.each do |href, link_text|
+            'https://github.com/exastencil/porous.dev' => 'View the source'
+          }.each do |dest, link_text|
             li do
-              a(href: href) { link_text }
+              a link_text, href: dest
             end
           end
         end

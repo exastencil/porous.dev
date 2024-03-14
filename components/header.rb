@@ -1,8 +1,10 @@
-class Header
-  include Porous::Component
+# frozen_string_literal: true
 
-  def render
-    header.top! class: 'container mx-auto p-6 flex justify-between' do
+# The navigation header at the top of the page
+#
+class Header < Porous::Component
+  def content
+    header id: 'top', class: 'container mx-auto p-6 flex justify-between' do
       a href: '/', class: 'text-4xl font-bold tracking-wide' do
         h1 do
           text 'porous'
