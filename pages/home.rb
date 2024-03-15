@@ -48,26 +48,30 @@ class Home < Porous::Page
         end
 
         div class: 'text-md grid gap-12 lg:grid-cols-2' do
-          {
-            ['🙅',
-             'No Bundled Runtime'] => 'The plumbing of the application happens in the library so updating becomes straightforward unless breaking changes affect the code you wrote. Your application consists of Plain Old Ruby Objects.',
-            ['🖥',
-             '️Server-Side Rendering'] => 'The web server loads and renders components on requests. Good for initial page loads, great for SEO!',
-            ['💻',
-             'Client-Side Rendering'] => 'Once the page is loaded, component code is fetched and used to hydrate the page with interactive elements – including routing. Subsequent navigation doesnʼt need to request pages from the web server.',
-            ['🌄',
-             'Serves Static Files'] => 'Put files in the static directory and it will be served by the application. Images, fonts, vendored libraries – no problem.',
-            ['🔥',
-             'Live Reload'] => 'The development server watches your files and notifies the browser to refresh via WebSockets, the same mechanism used for communication in production applications.',
-            ['📡',
-             'Real-time Communication'] => 'Pages communicate with the server over a secure WebSocket connection making data streaming and real-time features easier to implement.'
-          }.each do |heading, description|
-            div class: 'rounded flex flex-col gap-6 p-6 shadow-lg divide-y divide-gray-100 dark:divide-gray-700 bg-white dark:bg-slate-800' do
-              h3 class: 'flex gap-6 justify-start text-xl' do
-                heading.each { |item| span item }
+          component Principle, icon: '🙅', heading: 'Avoid Boilerplate' do
+            p 'The plumbing of the application happens in the library so updating becomes straightforward unless breaking changes affect the code you wrote. Your application consists of Plain Old Ruby Objects.', class: 'pt-6'
+          end
+          component Principle, icon: '😗', heading: 'Keep it Simple' do
+            p 'Start with server-side rendering and turn on other features like client-side rendering as you need them.', class: 'pt-6'
+          end
+          component Principle, icon: '💻', heading: 'Developer Experience is Key' do
+            p class: 'pt-6' do
+              text 'Porous will always try to make things as easy for you as possible. Need a CSS framework? Just '
+              code class: 'inline-block bg-gray-200 dark:bg-gray-700 rounded py-0.5 px-2' do
+                text 'require '
+                span 'porous/tailwind', class: 'text-emerald-500 dark:text-emerald-300'
               end
-              p description, class: 'pt-6'
+              text '. Need a database? Just turn it on!'
             end
+          end
+          component Principle, icon: '🌄', heading: 'Serves Static Files' do
+            p 'Put files in the static directory and it will be served by the application. Images, fonts, vendored libraries – no problem.', class: 'pt-6'
+          end
+          component Principle, icon: '🔥', heading: 'Live Reload' do
+            p 'The development server watches your files and notifies the browser to refresh via WebSockets, the same mechanism used for communication in production applications.', class: 'pt-6'
+          end
+          component Principle, icon: '📡', heading: 'Real-time Communication' do
+            p 'Pages communicate with the server over a secure WebSocket connection making data streaming and real-time features easier to implement.', class: 'pt-6'
           end
         end
       end
