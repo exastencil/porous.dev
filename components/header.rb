@@ -21,10 +21,9 @@ class Header < Porous::Component
         end
         ul class: 'pl-3' do
           li do
-            a href: 'https://github.com/exastencil/porous', rel: 'noopener noreferrer', target: '_blank',
+            a href: 'https://github.com/exastencil/porous', class: 'fill-slate-800 dark:fill-white', rel: 'noopener noreferrer', target: '_blank',
               aria_label: 'GitHub repository' do
-              img width: 24, height: 24, src: '/github.svg', alt: 'GitHub icon',
-                  class: 'fill-slate-800 dark:fill-white'
+              component Github, size: 24
             end
           end
         end

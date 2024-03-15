@@ -13,13 +13,13 @@ class Footer < Porous::Component
         end
         ul class: 'inline-flex gap-4' do
           li do
-            a href: 'https://github.com/exastencil/porous', target: '_blank' do
-              img width: 24, height: 24, src: '/github.svg', alt: 'GitHub'
+            a href: 'https://github.com/exastencil/porous', class: 'fill-current', target: '_blank' do
+              component Github, size: 24
             end
           end
           li do
             a href: 'https://rubygems.org/gems/porous', target: '_blank' do
-              img width: 24, height: 24, src: '/rubygems.svg', alt: 'RubyGems'
+              component Rubygems, size: 24
             end
           end
         end
