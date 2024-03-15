@@ -4,20 +4,13 @@
 # Path: /
 #
 class Home < Porous::Page
-  def self.route = '/'
-  def page_title = 'Porous • Isomorphic Web Engine'
-  def page_description = 'Utility for efficiently writing applications in Ruby that run in the browser and on your server.'
+  metadata route: '/', title: 'Porous • Isomorphic Web Engine',
+           description: 'Utility for efficiently writing applications in Ruby that run in the browser and on your server.'
 
   def content
-    head do
-      title 'Porous • Isomorphic Web Engine'
-      meta name: 'description',
-           content: 'Utility for efficiently writing applications in Ruby that run in the browser and on your server.'
-      script src: 'https://cdn.tailwindcss.com'
-      link rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml'
-    end
-
     body class: 'text-slate-700 dark:text-slate-200 bg-gray-50 dark:bg-gray-900' do
+      script src: 'https://cdn.tailwindcss.com'
+
       # Header
       component Header
 
@@ -32,7 +25,7 @@ class Home < Porous::Page
         end
         p class: 'mt-8' do
           text 'Only write the '
-          strong 'content or logic needed for your app', class: 'drop-shadow-md text-emerald-400'
+          strong 'content and logic needed for your app', class: 'drop-shadow-md text-emerald-400'
           text '. No need to maintain the external interface of the framework to keep your application running.'
         end
         p class: 'mt-8' do

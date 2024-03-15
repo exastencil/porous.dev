@@ -14,14 +14,12 @@ class Header < Porous::Component
       nav class: 'divide-x divide-gray-500/25 inline-flex items-center gap-4 text-lg font-medium' do
         ul do
           li do
-            a href: '/documentation' do
-              text 'Docs'
-            end
+            a 'Docs', href: '/documentation', class: 'hover:text-slate-600'
           end
         end
         ul class: 'pl-3' do
           li do
-            a href: 'https://github.com/exastencil/porous', class: 'fill-slate-800 dark:fill-white', rel: 'noopener noreferrer', target: '_blank',
+            a href: 'https://github.com/exastencil/porous', class: 'fill-slate-800 hover:fill-slate-600 dark:fill-white', target: '_blank',
               aria_label: 'GitHub repository' do
               component Github, size: 24
             end

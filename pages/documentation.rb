@@ -4,20 +4,13 @@
 # Path: /documentation
 #
 class Documentation < Porous::Page
-  def self.route = '/documentation'
-  def page_title = 'Porous • Documentation'
-  def page_description = 'This page houses a collection of guides, instructions and tips on how to use the Porous web engine.'
+  metadata route: '/documentation', title: 'Porous • Documentation',
+           description: 'This page houses a collection of guides, instructions and tips on how to use the Porous web engine.'
 
   def content
-    head do
-      title 'Porous • Documentation'
-      meta name: 'description',
-           content: 'This page houses a collection of guides, instructions and tips on how to use the Porous web engine.'
-      script src: 'https://cdn.tailwindcss.com'
-      link rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml'
-    end
-
     body class: 'text-slate-700 dark:text-slate-200 bg-gray-50 dark:bg-gray-900' do
+      script src: 'https://cdn.tailwindcss.com'
+
       # Header
       component Header
 
