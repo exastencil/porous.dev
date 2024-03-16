@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/exastencil/porous.git
-  revision: 1ef235e770c0a00b896f6e4d5de4c1e94c1f4b5a
+  revision: 7e2d983e05e7dc27e35ef69d45ef7f9ebe0a3e98
   branch: rewrite
   specs:
     porous (0.3.2)
